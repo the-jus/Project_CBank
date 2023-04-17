@@ -11,4 +11,13 @@ public class BankController {
     public String showLoginPage(){
         return "login/loginpage";
     }
+
+/*    @RequestMapping("/customerDetails")
+    public String customerDetails(){
+        return "customerdetails";
+    }*/
+
+
+
+
 }
