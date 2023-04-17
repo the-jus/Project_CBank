@@ -137,11 +137,16 @@ h1 {
 }
 
 .container1 {
-	background-color: #fff;
-	border: 1px solid #ccc;
-	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    	border-radius: 25px 25px 25px 25px;
+    	max-width: 1000px;
+    	margin: 0 auto;
+    	padding: 40px;
+    	background-color: #fff;
+    	margin: 0 auto;
+    	padding: 40px;
+    	background-color: #fff;
+    	box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
 }
 
 .rateType {
@@ -169,7 +174,7 @@ select {
 
 
 .btn {
-	background-color: #4CAF50;
+	background-color: #007bff;
 	color: #fff;
 	padding: 10px 20px;
 	border: none;
@@ -178,21 +183,47 @@ select {
 }
 
 .btn:hover {
-	background-color: #3e8e41;
+	background-color: #0069d9;
 }
  .tier-inputs label {
         display: inline-block;
-        width: 100px;
+        width: 150px;
         text-align: right;
-        margin-right: 10px;
+
     }
 
     .tier-inputs input[type="number"] {
-        width: 80px;
+        width: 150px;
+        left-margin:2px;
     }
 
     .tier-inputs button {
         margin-left: 110px;
+    }
+    form {
+    	display: flex;
+    	flex-direction: column;
+    }
+
+    .form-field {
+    	display: flex;
+    	flex-direction: column;
+    	margin-bottom: 10px;
+    }
+
+    label {
+    	font-size: 1rem;
+    	font-weight: bold;
+    	margin-bottom: 5px;
+    }
+
+    input[type="text"] {
+    	padding: 10px;
+    	border: none;
+    	border-radius: 5px;
+    	background-color: #f7f7f7;
+    	font-size: 1rem;
+    	margin-bottom: 10px;
     }
 </style>
 </head>
@@ -221,18 +252,18 @@ select {
 	<h1>Configure Rate</h1>
 
 	<form class="container1" action="addRate" method="post">
-		<div>
+		<div class="form-field">
 			<label for="rateCode">Rate code:</label> <input type="text"
 				id="rateCode" name="rateCode"><br>
 		</div>
 		<br>
-		<div>
+		<div  class="form-field">
 			<label for="rateDescription">Rate Description:</label><br>
 			<textarea id="rateDescription" name="rateDescription" rows="5"
 				cols="50"></textarea>
 		</div>
 		<br> <br>
-		<div class="rateType">
+		<div class="form-field">
 			<label for="rateType">Rate Type:</label> <select id="rateType"
 				name="rateType">
 				<option value="oneTime">One Time</option>
@@ -241,7 +272,7 @@ select {
 			</select>
 		</div>
 		<br> <br>
-		<div class="pricingMethodology">
+		<div class="form-field">
 			<label for="pricingMethodology">Pricing Methodology:</label> <select id="pricingMethodology"
 				name="pricingMethodology">
 				<option value="flatAbsolute">Flat Absolute</option>
@@ -262,6 +293,7 @@ select {
                 <label>Rate:</label>
                 <input type="number" name="rate[]" required>
                 <button type="button" onclick="removeTier(this)">Remove Tier</button>
+                <br>
             </div>
         </div>
         <br>
