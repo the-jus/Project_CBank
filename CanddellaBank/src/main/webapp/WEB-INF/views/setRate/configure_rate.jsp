@@ -303,13 +303,13 @@ select {
 
 
 		<div>
-			<button class="btn">Save</button>
+			<center><button class="btn">Save</button></center>
 		</div>
 	</form>
 
 
 
-
+<br>
 </body>
 <footer>
 	<div class="container">
