@@ -281,6 +281,14 @@ select {
 			</select>
 		</div>
 		<br> <br>
+		<div class="form-field">
+        			<label for="basedOn">Based On:</label> <select id="basedOn"
+        				name="basedOn">
+        				<option value="value">Value</option>
+        				<option value="volume">Volume</option>
+        			</select>
+        		</div>
+        		<br> <br>
 
 		<hr>
         <h2>Charge Quantity Rate</h2>
