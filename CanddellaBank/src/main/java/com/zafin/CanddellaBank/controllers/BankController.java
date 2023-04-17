@@ -11,4 +11,5 @@ public class BankController {
     public String showLoginPage(){
         return "login/loginpage";
     }
+
 }
