@@ -13,6 +13,6 @@ public class BankController {
     }
     @RequestMapping("/showrateconfig")
     public String showRateConfig(){
-        return "configure_rate";
+        return "setRate/configure_rate";
     }
 }

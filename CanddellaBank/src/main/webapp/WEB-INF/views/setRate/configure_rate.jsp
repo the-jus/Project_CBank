@@ -16,7 +16,7 @@
             "<button type='button' onclick='removeTier(this)'>Remove Tier</button>";
         document.getElementById("tierContainer").appendChild(tierDiv);
     }
-    
+
     function removeTier(button) {
         button.parentNode.remove();
     }
@@ -281,9 +281,9 @@ select {
 			</select>
 		</div>
 		<br> <br>
-		
+
 		<hr>
-        <h2>Tiers</h2>
+        <h2>Charge Quantity Rate</h2>
         <div id="tierContainer">
             <div class="tier-inputs">
                 <label>Lower Limit:</label>
@@ -299,9 +299,9 @@ select {
         <br>
         <button type="button" onclick="addTier()">Add Tier</button>
         <br><br>
-		
-		
-		
+
+
+
 		<div>
 			<button class="btn">Save</button>
 		</div>
