@@ -1,8 +1,7 @@
 package com.zafin.CanddellaBank.entities;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,9 +15,11 @@ public class Rate {
         private String rateDescription;
         private String rateType;
         private String pricingMethodology;
+        private String basedOn;
         private int[] min;
         private int[] max;
         private double[] rate;
 
-
+        @OneToOne(mappedBy = "rate", cascade = CascadeType.ALL)
+        private Service service;
 }
