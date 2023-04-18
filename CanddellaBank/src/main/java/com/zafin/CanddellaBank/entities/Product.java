@@ -1,11 +1,14 @@
 package com.zafin.CanddellaBank.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -20,14 +23,21 @@ public class Product {
 
     private String productOwner;
 
-    private Date openingDate;
+    private LocalDate openingDate;
 
-    private Date validityDate;
+    private LocalDate validityDate;
 
-    private Date expiryDate;
+    private LocalDate expiryDate;
 
     private String currency;
 
     private double product_level_rates;
+
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "product_service",
+            joinColumns = @JoinColumn(name = "product_code"),
+            inverseJoinColumns = @JoinColumn(name = "service_code"))
+    private Set<Service> services;
+
 
 }

@@ -5,7 +5,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Getter
@@ -25,6 +27,9 @@ public class Service {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "rate_code")
     private Rate rate;
+
+    @ManyToMany(mappedBy = "services")
+    private List<Product> products;
 
 
 
