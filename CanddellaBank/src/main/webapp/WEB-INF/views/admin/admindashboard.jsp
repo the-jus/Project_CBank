@@ -316,6 +316,7 @@ font-size: 50px;
 			All Services</button>
 		<button class="tablinks" onclick="ViewAllCustomers()">View
 			All Customers</button>
+            <button class="tablinks" onclick="Transaction()">Transaction</button>
 	</div>
 	<script>
 function CreateService() {
@@ -344,6 +345,11 @@ function ViewAllServices() {
 </script>
 <script>
 function ViewAllCustomers() {
+  window.open("https://www.example.com");
+}
+</script>
+<script>
+function Transaction() {
   window.open("https://www.example.com");
 }
 </script>
