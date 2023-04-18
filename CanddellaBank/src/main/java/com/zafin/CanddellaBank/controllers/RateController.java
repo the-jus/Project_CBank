@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class RateController {
     @Autowired
     RateRepository rateRepository;
+    @RequestMapping("/showrateconfig")
+    public String showRateConfig(){
+        return "rate/configure_rate";
+    }
     @RequestMapping(value = "/addRate" ,method = RequestMethod.POST)
     public String showRatePage(@ModelAttribute("rate") Rate rate){
         rateRepository.save(rate);

@@ -11,9 +11,6 @@ public class BankController {
     public String showLoginPage(){
         return "login/loginpage";
     }
-    @RequestMapping("/showrateconfig")
-    public String showRateConfig(){
-        return "rate/configure_rate";
-    }
+
 
 }
