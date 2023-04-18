@@ -25,6 +25,5 @@ public class AdminController {
     public String adminLogin(@RequestParam("username") String username,@RequestParam("password") String passWord){
         Admin admin = adminRepository.findByUsername(username);
         return "admin/admindashboard";
-
     }
 }

@@ -21,10 +21,11 @@ public class ServiceController {
     ServiceRepository serviceRepository;
     @Autowired
     RateRepository rateRepository;
+
     @RequestMapping(value = "/addService" ,method = RequestMethod.POST)
     public String showRatePage(@ModelAttribute("service") Service service){
         serviceRepository.save(service);
-        return "";
+        return "admin/admindashboard";
     }
 
     @RequestMapping("/showServiceConfig")
