@@ -2,6 +2,8 @@ package com.zafin.CanddellaBank.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -29,5 +31,9 @@ public class Product {
     private String currency;
 
     private double product_level_rates;
+
+    @ManyToOne
+    @JoinColumn(name = "service_id")
+    private Service service;
 
 }

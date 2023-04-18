@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Getter
@@ -22,6 +23,10 @@ public class Service {
     private String currency;
     private boolean standaloneService;
     private boolean mandatoryService;
+
+    @OneToMany(mappedBy = "service", cascade = CascadeType.ALL)
+    private List<Product> products;
+
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "rate_code")
     private Rate rate;
