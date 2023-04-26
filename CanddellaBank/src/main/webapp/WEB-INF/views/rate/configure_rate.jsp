@@ -231,7 +231,7 @@ select {
 	<header>
 		<div class="bname">
 
-			<h1>CBank</h1>
+			<h1>ZBank</h1>
 		</div>
 		<nav>
 			<ul>
@@ -275,9 +275,9 @@ select {
 		<div class="form-field">
 			<label for="pricingMethodology">Pricing Methodology:</label> <select id="pricingMethodology"
 				name="pricingMethodology">
-				<option value="flatAbsolute">Flat Absolute</option>
-				<option value="flatRate">Flat Rate</option>
-				<option value="tieredRate">Tiered Rate</option>
+				<option value="wholeTier">Whole Tier</option>
+				<option value="progressiveTier">Progressive Tier</option>
+
 			</select>
 		</div>
 		<br> <br>

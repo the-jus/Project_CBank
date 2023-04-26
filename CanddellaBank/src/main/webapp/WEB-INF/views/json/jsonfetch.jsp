@@ -8,9 +8,6 @@
 <title>Insert title here</title>
 
 <style>
-
-
-
 *{
 font-family : Arial,Sans-sherif;
 margin:0;
@@ -62,7 +59,7 @@ nav a:hover{
 
 
 
-/*  Admin login */
+/*  user login */
 
 		form {
 			background-color: #fff;
@@ -156,6 +153,8 @@ li {
   transform: translateY(-3px);
 }
 
+
+
 .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -163,13 +162,14 @@ li {
   display:flex;
 }
 
+
+
 </style>
 
 
 </head>
 <body>
 <header>
-
   <div class="bname">
     <h1>ZBank</h1>
   </div>
@@ -182,19 +182,10 @@ li {
     </ul>
   </nav>
 </header>
-    <form action="adminLogin" method="post">
-		<h3>Welcome</h3>
-		Sign on to your Admin Account
-		<br>
-		<br>
 
-		<input type="text" placeholder="Username" id="username" name="username" required>
+<h2>Rate Details</h2>
+    <table id="table"></table>
 
-		<input type="password" placeholder="Password" id="password" name="password" required>
-
-		<center><input type="submit" value="Login"></center>
-		<br>
-	</form>
 	<br>
 
 
@@ -209,12 +200,44 @@ li {
 
 </body>
 
+<script>
+  var url = "http://localhost:8080/CanddellaBank/viewAllRates";
+
+  // send AJAX request
+  var req = new XMLHttpRequest();
+  req.onload = function() {
+  	generateHTMLTable(req.response);
+  }
+  req.open("GET",url);
+  req.send();
+
+  // generate HTML string and insert it
+  function generateHTMLTable(data) {
+  	var str = " ";
+  	console.log("data=="+data)
+  	const rate = JSON.parse(data);
+  	for(var i=0;i< rate.length;i++){
+        str+="  Rate name : "+rate[i]+",  \n";
+  	    str+="       ";}
+
+
+  	var table = document.getElementById("table");
+  	table.innerHTML = str;
+
+
+  }
+</script>
+
+
+
+
+
 <footer>
 <div class="container">
 <div class="row">
 <div class="col-md-4">
-<h3>About ZBank</h3>
-<p>ZBank is a leading bank in India providing innovative financial solutions to individuals and businesses.</p>
+<h3>About CanddellaBank</h3>
+<p>CanddellaBank is a leading bank in India providing innovative financial solutions to individuals and businesses.</p>
 </div>
 <div class="col-md-4">
 <h3>Contact Us</h3>

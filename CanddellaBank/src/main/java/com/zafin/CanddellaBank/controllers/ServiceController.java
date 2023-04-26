@@ -21,11 +21,10 @@ public class ServiceController {
     ServiceRepository serviceRepository;
     @Autowired
     RateRepository rateRepository;
-
     @RequestMapping(value = "/addService" ,method = RequestMethod.POST)
     public String showRatePage(@ModelAttribute("service") Service service){
         serviceRepository.save(service);
-        return "admin/admindashboard";
+        return "redirect:adminControl";
     }
 
     @RequestMapping("/showServiceConfig")
@@ -33,5 +32,12 @@ public class ServiceController {
         List<Rate> rateList = rateRepository.findAll();
         theModel.addAttribute("rateList",rateList);
         return "service/add_service";
+    }
+
+    @RequestMapping("/viewServices")
+    public String viewServices(Model theModel){
+        List<Service> serviceList = serviceRepository.findAll();
+        theModel.addAttribute("serviceList",serviceList);
+        return "service/viewservice";
     }
 }

@@ -19,6 +19,6 @@ public class RateController {
     @RequestMapping(value = "/addRate" ,method = RequestMethod.POST)
     public String showRatePage(@ModelAttribute("rate") Rate rate){
         rateRepository.save(rate);
-        return "admin/admindashboard";
+        return "redirect:adminControl";
     }
 }

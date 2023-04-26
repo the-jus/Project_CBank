@@ -8,9 +8,6 @@
 <title>Insert title here</title>
 
 <style>
-
-
-
 *{
 font-family : Arial,Sans-sherif;
 margin:0;
@@ -62,7 +59,7 @@ nav a:hover{
 
 
 
-/*  Admin login */
+/*  user login */
 
 		form {
 			background-color: #fff;
@@ -156,6 +153,8 @@ li {
   transform: translateY(-3px);
 }
 
+
+
 .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -163,15 +162,16 @@ li {
   display:flex;
 }
 
+
+
 </style>
 
 
 </head>
 <body>
 <header>
-
   <div class="bname">
-    <h1>ZBank</h1>
+    <h1>CBank</h1>
   </div>
   <nav>
     <ul>
@@ -182,24 +182,12 @@ li {
     </ul>
   </nav>
 </header>
-    <form action="adminLogin" method="post">
-		<h3>Welcome</h3>
-		Sign on to your Admin Account
-		<br>
-		<br>
+<center>
+<h2> Error Occurred <h2></center>
+<center>
+<p>Check your credentials<p></center>
 
-		<input type="text" placeholder="Username" id="username" name="username" required>
-
-		<input type="password" placeholder="Password" id="password" name="password" required>
-
-		<center><input type="submit" value="Login"></center>
-		<br>
-	</form>
-	<br>
-
-
-<br>
-
+<br><br>
 <!-- The dots/circles -->
 <div style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span>
@@ -213,8 +201,8 @@ li {
 <div class="container">
 <div class="row">
 <div class="col-md-4">
-<h3>About ZBank</h3>
-<p>ZBank is a leading bank in India providing innovative financial solutions to individuals and businesses.</p>
+<h3>About CanddellaBank</h3>
+<p>CanddellaBank is a leading bank in India providing innovative financial solutions to individuals and businesses.</p>
 </div>
 <div class="col-md-4">
 <h3>Contact Us</h3>

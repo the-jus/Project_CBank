@@ -16,7 +16,7 @@ body {
 	padding: 0;
 	font-family: Arial, sans-serif;
 	background-color: #f7f7f7;
-	background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+	/*background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);*/
 	/* background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%); */
 }
 
@@ -283,12 +283,64 @@ li {
 font-size: 50px;
 }
 
+/* Latest Changes */
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
+body  {
+    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+  background-size:cover;
+        -webkit-animation: slidein 100s;
+        animation: slidein 100s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;
+}
+
+@-webkit-keyframes slidein {
+from {background-position: top; background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+}
+
+@keyframes slidein {
+from {background-position: top;background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+
+}
+
+
+
+.bspace
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(75, 75, 250, 0.3);
+  border-radius: 3px;
+}
+.bspace h1{
+  text-align:center;
+  color:white;
+  font-family: 'Source Code Pro', monospace;
+  text-transform:uppercase;
+}
+
 </style>
 </head>
 <body>
 	<header>
 		<div class="bname">
-
 			<h1>ZBank</h1>
 		</div>
 		<nav>
@@ -297,6 +349,7 @@ font-size: 50px;
 				<li><a href="#">About</a></li>
 				<li><a href="#">Services</a></li>
 				<li><a href="#">Contact</a></li>
+				<li><a href="showAdminLog">Logout</a></li>
 			</ul>
 		</nav>
 		
@@ -304,50 +357,77 @@ font-size: 50px;
 	<br>
 <h1 class="welcome" align="center">Welcome Admin</h1>
 	<div class="tab">
-<button class="tablinks" onclick="CreateProduct()">Create
-			Product</button>
-		<button class="tablinks"
-			onclick="CreateService()">Create Service</button>
-		<button class="tablinks" onclick="CreateRates()">Create
-			Rates</button>
-<button class="tablinks" onclick="ViewAllProducts()">View
-			All Products</button>
-<button class="tablinks" onclick="ViewAllServices()">View
-			All Services</button>
-		<button class="tablinks" onclick="ViewAllCustomers()">View
-			All Customers</button>
+	<button class="tablinks" onclick="CreateRates()">Create Rates</button>
+    <button class="tablinks" onclick="CreateService()">Create Service</button>
+    <button class="tablinks" onclick="CreateProduct()">Create Product</button>
+    <button class="tablinks" onclick="CreateAccount()">Create Account</button>
+
+	<button class="tablinks" onclick="CreateCustomer()">Create Customer</button>
+
+
+
+<button class="tablinks" onclick="ViewAllRates()">View All Rates</button>
+<button class="tablinks" onclick="ViewAllServices()">View All Services</button>
+<button class="tablinks" onclick="ViewAllProducts()">View All Products</button>
+
+<button class="tablinks" onclick="ViewAllCustomers()">View All Customers</button>
+
+<button class="tablinks" onclick="AddTransactionFile()">Upload Transaction</button>
+
+
+
 	</div>
 	<script>
 function CreateService() {
-  window.open("https://www.example.com");
+  window.location.href = 'showServiceConfig';
+}
+</script>
+	<script>
+function CreateCustomer() {
+  window.location.href = 'customerSignup';
 }
 </script>
 <script>
+function CreateAccount() {
+  window.location.href = 'showAccountConfig';
+}
+</script>
+
+<script>
 function CreateProduct() {
-  window.open("https://www.example.com");
+  window.location.href = 'showProductConfig';
 }
 </script>
 <script>
 function CreateRates() {
-  window.open("https://www.example.com");
+  window.location.href = 'showrateconfig';
+}
+</script>
+<script>
+function AddTransactionFile() {
+  window.location.href = 'readTransaction';
 }
 </script>
 <script>
 function ViewAllProducts() {
-  window.open("https://www.example.com");
+  window.location.href = 'viewProducts';
 }
 </script>
 <script>
 function ViewAllServices() {
-  window.open("https://www.example.com");
+  window.location.href = 'viewServices';
 }
 </script>
 <script>
 function ViewAllCustomers() {
-  window.open("https://www.example.com");
+  window.location.href = 'viewCustomers';
 }
 </script>
-	
+<script>
+function ViewAllRates() {
+  window.location.href = 'viewRates';
+}
+</script>
 	<br/>
 	</body>
 	<footer>

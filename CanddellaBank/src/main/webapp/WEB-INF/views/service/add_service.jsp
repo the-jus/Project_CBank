@@ -235,7 +235,7 @@ select {
 	<header>
 		<div class="bname">
 
-			<h1>CBank</h1>
+			<h1>ZBank</h1>
 		</div>
 		<nav>
 			<ul>
@@ -307,9 +307,6 @@ select {
             <label for="rate">Select Rates:</label>
                         <select id="rate" name="rate" required>
                         <c:forEach var="rate" items="${rateList}">
-
-
-
 
                             <option value="${rate.rateCode}">${rate.rateCode}</option>
                           </c:forEach>
